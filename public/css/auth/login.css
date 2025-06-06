@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+}
+
+body {
+    font-family: var(--poppins);
+    background: linear-gradient(135deg, var(--light) 0%, var(--light-blue) 100%);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.custom-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.login-image {
+    width: 50%;
+    max-width: 500px;
+}
+
+.login-image img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--dark);
+}
+
+.login-form h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.logo {
+    color: var(--blue);
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .login-form, .login-image {
+        width: 100%;
+        max-width: none;
+    }
+    .login-image img {
+        max-height: 50vh;
+    }
+    .login-form {
+        padding: 1rem;
+    }
+}
